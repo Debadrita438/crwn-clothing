@@ -5,7 +5,7 @@ import FormInput from '../FormInput/FormInput';
 
 import { auth, createUserProfileDocument } from '../../firebase/Firebase';
 
-import './SignUp.scss';
+import { SignUpContainer, SignUpTitle } from './SignUp.styles';
 
 
 class SignUp extends Component {
@@ -50,11 +50,11 @@ class SignUp extends Component {
     render() {
         const { displayName, email, password, confirmPassword } = this.state; 
         return (  
-            <div className='sign-up'>
-                <h2 className="title">I don't have an account</h2>
+            <SignUpContainer>
+                <SignUpTitle>I don't have an account</SignUpTitle>
                 <span>Sign up with your email and password</span>
 
-                <form className="sign-up-form" onSubmit={ this.handleSubmit }>
+                <form onSubmit={ this.handleSubmit }>
                     <FormInput 
                         type='text'
                         name='displayName'
@@ -95,7 +95,7 @@ class SignUp extends Component {
                         <CustomButton type="submit">Sign Up</CustomButton>
                     </div>
                 </form>
-            </div>
+            </SignUpContainer>
         );
     }
 }

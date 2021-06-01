@@ -1,13 +1,13 @@
 import SignIn from '../../components/SignIn/SignIn';
 import SignUp from '../../components/SignUp/SignUp';
 
-import './VerificationPage.scss';
+import { VerificationContainer } from './VarificationPage.styles';
 
 const VerificationPage = () => (
-    <div className='verification'>
+    <VerificationContainer>
         <SignIn />
         <SignUp />
-    </div>
+    </VerificationContainer>
 );
 
 export default VerificationPage;
