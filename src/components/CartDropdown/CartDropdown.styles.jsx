@@ -19,6 +19,11 @@ export const CartDropdownButton = styled(CustomButton)`
     margin-top: auto;
 `;
 
+export const CartDropdownButtonDisabled = styled(CustomButton)`
+    margin-top: auto;
+    cursor: not-allowed;
+`;
+
 export const CartItemsStyles = styled.div`
     height: 240px;
     display: flex;
