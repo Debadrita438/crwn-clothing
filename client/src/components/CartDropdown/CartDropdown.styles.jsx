@@ -22,6 +22,10 @@ export const CartDropdownButton = styled(CustomButton)`
 export const CartDropdownButtonDisabled = styled(CustomButton)`
     margin-top: auto;
     cursor: not-allowed;
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `;
 
 export const CartItemsStyles = styled.div`
@@ -34,4 +38,14 @@ export const CartItemsStyles = styled.div`
 export const EmptyMessageStyles = styled.span`
     font-size: 18px;
     margin: 50px auto;
+`;
+
+export const MobileViewMessage = styled.div`
+    display: none;
+
+    @media screen and (max-width: 800px) {
+        display: inline;
+        font-size: 18px;
+        text-align: center;
+    }
 `;

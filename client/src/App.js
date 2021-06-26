@@ -3,8 +3,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './App.css';
-
 import Header from './components/Header/Header';
 
 import HomePage from './pages/HomePage/HomePage';
@@ -14,6 +12,8 @@ import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
 import { selectCurrentUser } from './redux/user/userSelector';
 import { checkUserSession } from './redux/user/userAction';
+
+import { AppGlobalStyles } from './global.styles';
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
@@ -31,6 +31,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
     return(
       <div>
+        <AppGlobalStyles />
         <Header />
         <Switch>
           <Route exact path='/' component={ HomePage } />

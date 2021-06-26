@@ -7,7 +7,14 @@ import { selectCartItems } from '../../redux/cart/cartSelector';
 import { selectCurrentUser } from '../../redux/user/userSelector';
 import { toggleCartHidden } from '../../redux/cart/cartAction';
 
-import { CartDropdownContainer, CartDropdownButton, CartDropdownButtonDisabled, CartItemsStyles, EmptyMessageStyles } from './CartDropdown.styles';
+import { 
+    CartDropdownContainer, 
+    CartDropdownButton, 
+    CartDropdownButtonDisabled, 
+    CartItemsStyles, 
+    EmptyMessageStyles, 
+    MobileViewMessage 
+} from './CartDropdown.styles';
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
@@ -29,11 +36,16 @@ const CartDropdown = ({ cartItems, currentUser, history, dispatch }) => (
         </CartItemsStyles>
         {
             currentUser 
-            ? <CartDropdownButton onClick={() => {
-                history.push('/checkout');
-                dispatch(toggleCartHidden());
-            }}>Go to checkout</CartDropdownButton>
-            : <CartDropdownButtonDisabled>Go to checkout</CartDropdownButtonDisabled>
+            ?   <CartDropdownButton onClick={() => 
+                    {
+                        history.push('/checkout'); 
+                        dispatch(toggleCartHidden()); 
+                    }
+                }>Go to checkout</CartDropdownButton>
+            :   (<>
+                    <CartDropdownButtonDisabled>Go to checkout</CartDropdownButtonDisabled>
+                    <MobileViewMessage>Please Sign In/Up</MobileViewMessage>
+                </>)
         }
     </CartDropdownContainer>
 );
