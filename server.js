@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const enforce = require('express-sslify');
 
 if(process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 if(process.env.NODE_ENV === 'production') {
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
     app.use(express.static(path.join(__dirname, 'client/build')));
 
     app.get('*', (req, res) => {
@@ -22,6 +24,10 @@ if(process.env.NODE_ENV === 'production') {
 app.listen(port, error => {
     if(error) throw error;
     console.log('App is listening on port ' + port);
+});
+
+app.get('/service-worker', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
 });
 
 app.post('/payment', (req, res) => {
