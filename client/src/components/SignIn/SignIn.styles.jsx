@@ -11,6 +11,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const TitleStyles = styled.h2`
+    color: #c4c3ca;
     margin: 10px 0;
 `;
 

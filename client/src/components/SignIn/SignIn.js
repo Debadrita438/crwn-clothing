@@ -33,7 +33,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     return (
         <SignInContainer>
             <TitleStyles>I already have an account</TitleStyles>
-            <span>Sign in with your email and password</span>
+            <span style={{color: '#c4c3ca'}}>Sign in with your email and password</span>
 
             <form onSubmit={ handleSubmit }>
                 <FormInput 

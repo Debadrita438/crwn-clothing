@@ -11,5 +11,6 @@ export const SignUpContainer = styled.div`
 `;
 
 export const SignUpTitle = styled.h2`
+    color: #c4c3ca;
     margin: 10px 0;
 `;

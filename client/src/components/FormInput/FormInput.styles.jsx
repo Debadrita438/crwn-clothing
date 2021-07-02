@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
 
-const subColor = 'grey';
-const mainColor = 'black';
+const subColor = '#c4c3ca';
 
 const shrinkLabelStyles = css`
-    top: -14px;
-    font-size: 12px;
-    color: ${ mainColor };
+    top: -20px;
+    font-size: 15px;
+    color: ${ subColor };
 `;
 
 export const GroupContainer = styled.div`
@@ -20,15 +19,14 @@ export const GroupContainer = styled.div`
 
 export const FormInputContainer = styled.input`
     background: none;
-    background-color: white;
-    color: $sub-color;
+    background-color: #1f2029;
+    color: ${ subColor };
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
-    border-radius: 0;
-    border-bottom: 1px solid ${ subColor };
+    border-radius: 4px;
     margin: 25px 0;
 
     &:focus {
