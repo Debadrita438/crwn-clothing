@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const AppGlobalStyles = createGlobalStyle`
-    @font-face { 
-        font-family: 'Open Sans Condensed';
-        src: url('./assets/OpenSansCondensed-Light.ttf');
-    }
-    
     body {
         font-family: 'Open Sans Condensed' !important;
         padding: 20px 60px;

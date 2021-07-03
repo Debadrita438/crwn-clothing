@@ -4,7 +4,6 @@ import { selectCartItems, selectCartTotal } from '../../redux/cart/cartSelector'
 
 import CheckoutItem from '../../components/CheckoutItem/CheckoutItem';
 import StripeButton from '../../components/StripeButton/StripeButton';
-// import StripeCheckoutButton from '../../components/StripeButton/StripeCheckoutButton';
 
 import { 
     CheckoutHeaderBlockContainer, 
@@ -54,7 +53,6 @@ const CheckoutPage = ({ cartItems, total }) => {
                Exp Date - 09/24 CVV - 123
            </CheckoutWarning>
            <StripeButton price={ total } />
-           {/* <StripeCheckoutButton price={ total } /> */}
         </CheckoutPageContainer>
     );
 }
