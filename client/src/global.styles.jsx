@@ -6,6 +6,7 @@ const AppGlobalStyles = createGlobalStyle`
         padding: 20px 60px;
 
         @media screen and (max-width: 800px) {
+            font-family: 'Open Sans Condensed', sans-serif;
             padding: 0;
         }
     }
