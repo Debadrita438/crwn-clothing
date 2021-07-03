@@ -1,8 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 const AppGlobalStyles = createGlobalStyle`
+    @font-face { 
+        font-family: 'OpenSans Condensed';
+        src: url('./assets/OpenSansCondensed-Light.ttf');
+    }
+    
     body {
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'OpenSans Condensed', sans-serif !important;
         padding: 20px 60px;
 
         @media screen and (max-width: 800px) {
@@ -28,10 +33,6 @@ const IndexGlobalStyles = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    }
-    
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
 
     ::-webkit-scrollbar {
