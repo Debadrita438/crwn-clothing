@@ -56,6 +56,10 @@ export const ContentContainer = styled.div`
     background-color: white;
     opacity: 0.7;
     position: absolute;
+
+    @media screen and (max-width: 800px) {
+        width: 60px;
+    }
 `;
 
 export const TitleStyles = styled.h1`
