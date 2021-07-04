@@ -9,11 +9,10 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorkerRegistration';
 import { store, persistor } from './redux/store';
 
-import { IndexGlobalStyles } from './global.styles';
+import './index.css';
 
 ReactDOM.render(
     <Provider store = { store }>
-      <IndexGlobalStyles />
       <React.StrictMode>
         <BrowserRouter>
           <PersistGate persistor={ persistor }>
