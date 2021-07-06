@@ -30,6 +30,10 @@ const SignUp = ({ signUpStart }) => {
             alert('Password don\'t match, please try again.');
             return;
         } 
+        if(password.length < 6) {
+            alert('Password should be at least 6 characters long.');
+            return;
+        }
         signUpStart({ displayName, email, password });
     }
 
