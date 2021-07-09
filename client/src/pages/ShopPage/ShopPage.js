@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
     fetchCollectionStart: () => dispatch(fetchCollectionStart())
 });
 
-const ShopPage = ({ fetchCollectionStart, match }) => {
+export const ShopPage = ({ fetchCollectionStart, match }) => {
     useEffect(() => {
         fetchCollectionStart();
     }, [fetchCollectionStart]);

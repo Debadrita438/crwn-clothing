@@ -19,7 +19,7 @@ const mapStateToProps = createStructuredSelector({
     total: selectCartTotal
 });
 
-const CheckoutPage = ({ cartItems, total }) => {
+export const CheckoutPage = ({ cartItems, total }) => {
     return (
         <CheckoutPageContainer>
            <CheckoutHeaderContainer>

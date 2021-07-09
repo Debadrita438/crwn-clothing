@@ -41,8 +41,11 @@ export const CollectionItemImage = styled.div`
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+    background-image: ${ ({ imageUrl }) => `url(${ imageUrl })` };
     
 `;
+
+CollectionItemImage.displayName = 'CollectionItemImage';
 
 export const CollectionFooterContainer = styled.div`
     width: 100%;
@@ -57,9 +60,13 @@ export const NameStyles = styled.span`
     margin-bottom: 15px;
 `;
 
+NameStyles.displayName = 'NameStyles';
+
 export const PriceStyles = styled.span`
     width: 10%;
 `;
+
+PriceStyles.displayName = 'PriceStyles';
 
 export const AddButton = styled(CustomButton)`
     width: 80%;
@@ -75,3 +82,5 @@ export const AddButton = styled(CustomButton)`
         padding: 0 10px;
     }
 `;
+
+AddButton.displayName = 'AddButton';

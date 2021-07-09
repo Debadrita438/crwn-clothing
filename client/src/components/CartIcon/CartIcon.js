@@ -14,7 +14,7 @@ const mapStateToProps = createStructuredSelector({
     itemCount: selectCartItemsCount
 });
 
-const CartIcon = ({ toggleCartHidden, itemCount }) => (
+export const CartIcon = ({ toggleCartHidden, itemCount }) => (
     <CartIconContainer onClick={ toggleCartHidden }>
         <ShoppingIcon />
         <ItemCountStyles>{ itemCount }</ItemCountStyles>

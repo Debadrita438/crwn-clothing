@@ -22,7 +22,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 
-const CartDropdown = ({ cartItems, currentUser, history, dispatch }) => (  
+export const CartDropdown = ({ cartItems, currentUser, history, dispatch }) => (  
     <CartDropdownContainer>
         <CartItemsStyles>
             {
@@ -35,7 +35,7 @@ const CartDropdown = ({ cartItems, currentUser, history, dispatch }) => (
             }
         </CartItemsStyles>
         {
-            currentUser 
+            currentUser    
             ?   <CartDropdownButton onClick={() => 
                     {
                         history.push('/checkout'); 

@@ -19,6 +19,8 @@ export const TitleStyles = styled.h1`
     }
 `;
 
+TitleStyles.displayName = 'TitleStyles';
+
 export const PreviewContainer = styled.div`
     display: flex;
     justify-content: space-between;

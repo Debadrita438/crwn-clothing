@@ -33,7 +33,11 @@ export const QuantityStyles = styled(TextContainer)`
     }
 `;
 
+QuantityStyles.displayName = 'QuantityStyles';
+
 export const RemoveButtonStyles = styled.div`
     padding-left: 12px;
     cursor: pointer;
 `;
+
+RemoveButtonStyles.displayName = 'RemoveButtonStyles';

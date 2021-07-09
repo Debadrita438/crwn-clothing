@@ -15,16 +15,11 @@ const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item))
 });
 
-const CollectionItem = ({ item, addItem }) => {
+export const CollectionItem = ({ item, addItem }) => {
     const { name, price, imageUrl } = item;
     return (
         <CollectionItemContainer>
-            <CollectionItemImage
-                className='image'
-                style={{
-                    backgroundImage: `url(${imageUrl})`
-                }}
-            />
+            <CollectionItemImage className='image' imageUrl={ imageUrl } />
             <CollectionFooterContainer>
                 <NameStyles>{ name }</NameStyles>
                 <PriceStyles>{ price }</PriceStyles>

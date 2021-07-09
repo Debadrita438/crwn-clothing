@@ -19,6 +19,8 @@ export const CartDropdownButton = styled(CustomButton)`
     margin-top: auto;
 `;
 
+CartDropdownButton.displayName = 'CartDropdownButton';
+
 export const CartDropdownButtonDisabled = styled(CustomButton)`
     margin-top: auto;
     cursor: not-allowed;
@@ -27,6 +29,8 @@ export const CartDropdownButtonDisabled = styled(CustomButton)`
         display: none;
     }
 `;
+
+CartDropdownButtonDisabled.displayName = 'CartDropdownButtonDisabled';
 
 export const CartItemsStyles = styled.div`
     height: 240px;
@@ -39,6 +43,8 @@ export const EmptyMessageStyles = styled.span`
     font-size: 18px;
     margin: 50px auto;
 `;
+
+EmptyMessageStyles.displayName = 'EmptyMessageStyles'
 
 export const MobileViewMessage = styled.div`
     display: none;
